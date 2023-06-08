@@ -1,0 +1,58 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "swipe-pile",
+    "friendlyName": "swipe-pile",
+    "description": "A cool swipe pile component",
+    "icon": "Text",
+    "requiredAncestors": ["dataprovider"],
+    "settings": [
+      {
+        "type": "text",
+        "key": "text",
+        "label": "Text"
+      },
+      {
+        "type": "dataProvider",
+        "label": "Data provider",
+        "key": "dataProvider",
+        "required": true
+      },
+      {
+        "type": "field",
+        "label": "Image column",
+        "key": "imageColumn",
+        "dependsOn": "dataProvider",
+        "required": true
+      },
+      {
+        "type": "field",
+        "label": "Is Swiped",
+        "key": "isSwipedColumn",
+        "dependsOn": "dataProvider",
+        "required": true
+      },
+      {
+        "type": "event",
+        "key": "onSwipeLeft",
+        "context": [
+          {
+            "label": "Swiped row",
+            "key": "row"
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "key": "onSwipeRight",
+        "context": [
+          {
+            "label": "Swiped row",
+            "key": "row"
+          }
+        ]
+      }
+    ]
+  }
+}
